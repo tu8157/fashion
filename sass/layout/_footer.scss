@@ -1,0 +1,123 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.footer {
+    margin: 0 20% 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+        margin: 0 5.9% 6.8% 5.3%;
+        display: block;
+
+    }
+
+    &__logo {
+        width: 94%;
+        margin-bottom:11px;
+
+        @media screen and (min-width: 768px) {
+            width: 70%;
+            margin-bottom: 28px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 21.7%;
+            margin-bottom: 41px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__ul {
+        margin-bottom: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 35px;
+        }
+
+        @media screen and (min-width: 1024px) {
+           justify-content: flex-end;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 10.5px;
+        @media screen and (min-width: 1024px) {
+          gap: 15px;
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            margin-right: 10.5px;
+            transform: rotate(45deg);
+            background: $txt_black;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 6px 0 6px;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.085em;
+        color: $txt_black;
+        text-decoration: none;
+        @media screen and (min-width: 1024px) {
+          font-size: 16px;
+        }
+    }
+
+    &__sns {
+        margin-bottom: 32px;
+        display: flex;
+        gap: 6px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 35px;
+            gap: 17px;
+        }
+    }
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+
+        @media screen and (min-width: 768px) {
+            width: 52px;
+            height: 52px;
+        }
+    }
+
+    &__iconLink {
+        display: block;
+    }
+
+    &__iconImg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__copy {
+        font-size: 12px;
+        letter-spacing: 0.085em;
+
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    }
+}

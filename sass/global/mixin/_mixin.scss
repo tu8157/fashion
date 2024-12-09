@@ -1,0 +1,40 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+@mixin link($p:12px 28.5px, $fz:15px) {
+    display: inline-block;
+    padding: $p;
+    background: $bage_button;
+    font-size: $fz;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: $txt_white;
+}
+@mixin catch($m) {
+    margin-bottom: $m;
+    line-height: 1.57;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 19px;
+    color: $txt_black;
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.875vw;
+    }
+}
+@mixin item($m) {
+    margin-bottom: $m;
+    font-size: 16px;
+    color: $txt_black;
+    letter-spacing: 0.11em;
+    line-height: 1;
+    font-weight: 500;
+}
+@mixin price {
+    padding-left: 8px;
+    font-size: 15px;
+    color: $txt_gray;
+}
